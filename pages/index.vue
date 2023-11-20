@@ -114,7 +114,7 @@ watch(videoIsVisible, (value) => {
   <section class="md:h-full relative" id="intro">
     <nuxt-img
       src="/img/wide.png"
-      class="w-full object-cover h-screen absolute"
+      class="w-full object-cover h-screen absolute -z-10"
       :class="imageClasses('wide')"
       loading="lazy"
       :placeholder="[47, 22, 75, 5]"
@@ -394,7 +394,7 @@ watch(videoIsVisible, (value) => {
 
   <section class="bg-twine-100" id="doubts">
     <div class="py-8">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-8">
         <div class="text-center text-twine-600 text-4xl uppercase font-semibold">
           Ficou com dúvidas?
         </div>
@@ -452,7 +452,7 @@ watch(videoIsVisible, (value) => {
     class="text-slate-300"
   >
     <div class="container mx-auto">
-      <div class="items-center grid grid-cols-1 lg:grid-cols-4">
+      <div class="items-center grid grid-cols-1 md:grid-cols-4 text-center md:text-left">
         <div>
           <nuxt-img
             src="/img/logo_dark.png"
@@ -466,9 +466,9 @@ watch(videoIsVisible, (value) => {
 
         <div>
           <h5 class="font-semibold pb-3">Endereço</h5>
-          <p>Estrada Rios, Km 3</p>
+          <p>Estrada Rios, Km 2</p>
           <p>Terra Roxa, PR, 85990-000</p>
-          <p class="flex gap-2">
+          <p class="flex gap-2 justify-center text-center md:justify-start md:text-left">
             <fa-icon class="pt-1" :icon="['fab', 'whatsapp']" />
             <div>
               <div>(67) 98105-6623</div>
@@ -480,9 +480,9 @@ watch(videoIsVisible, (value) => {
         <div>
           <h5 class="font-semibold pb-3">Links</h5>
           <nav class="flex flex-col gap-1.5">
-            <nuxt-link to="#">Fazer minha inscrição</nuxt-link>
-            <nuxt-link to="#">Dúvidas frequentes</nuxt-link>
-            <nuxt-link to="#">Preciso de ajuda</nuxt-link>
+            <nuxt-link to="#" @click.prevent="goTo('#plans')">Fazer minha inscrição</nuxt-link>
+            <nuxt-link to="#" @click.prevent="goTo('#doubts')">Dúvidas frequentes</nuxt-link>
+            <nuxt-link to="#" @click.prevent="goTo('#doubts')">Preciso de ajuda</nuxt-link>
           </nav>
         </div>
 
