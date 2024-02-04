@@ -135,19 +135,24 @@ watch(videoIsVisible, (value) => {
           />
         </div>
         <div class="flex items-center flex-col z-50">
+          <div class="text-center text-white text-4xl md:text-5xl font-semibold uppercase">
+            <div class="text-2xl md:text-3xl">Inscrições</div>
+            <div class="pb-3">Encerradas!</div>
+            <div class="pb-1 text-xl font-medium">nos vemos em</div>
+          </div>
           <Countdown :end="eventDate" />
-          <button
+          <!-- <button
             @click="play()"
             class="bg-black/40 rounded-full border-2 border-white px-12 py-5 text-lg font-semibold uppercase text-white mt-12 flex items-center gap-2 hover:bg-black/75 ease-in duration-150 hover:scale-125"
           >
             <fa-icon :icon="['fas', 'circle-play']" /> aperte o play
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
   </section>
 
-  <section class="h-full bg-white hidden md:block relative" id="video">
+  <!-- <section class="h-full bg-white hidden md:block relative" id="video">
     <div
       class="absolute inset-0 z-10 ease-in duration-300 hover:bg-black/60 group flex items-center justify-center gap-4"
     >
@@ -446,7 +451,7 @@ watch(videoIsVisible, (value) => {
         </div>
       </div>
     </div>
-  </section>
+  </section>  -->
 
   <footer
     class="text-slate-300"
